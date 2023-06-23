@@ -1,0 +1,88 @@
+$green: #1ECD97;
+$gray: #bbbbbb;
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.task-manager{
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+  width: 950px;
+  box-shadow: 4px 1px 31px 0px rgba(209, 125, 95, 1);
+  border-radius: 15px;
+
+  &__divider{
+    width: 400px;
+    height: 1px;
+    background-color: black;
+  }
+
+  &__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__container{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top:25px;
+  }
+
+  &__container-input{
+    width: 300px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .input{
+      width: 250px;
+      padding: 7px;
+      border-radius: 10px;
+    }
+
+  }
+
+  &__button-container{
+    margin-left: 10px;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+  }
+
+  button {
+    outline:none;
+    height: 40px;
+    text-align: center;
+    width: 100px;
+    border-radius:40px;
+    background: #fff;
+    border: 2px solid $green;
+    color:$green;
+    letter-spacing:1px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+
+    &:hover {
+      color:white;
+      background: $green;
+    }
+
+    &:active {
+      letter-spacing: 2px ;
+    }
+
+    &[disabled]{
+      pointer-events: none;
+      background-color: lightgray;
+      color: white;
+      border-color: lightgray;
+    }
+  }
+
+}
